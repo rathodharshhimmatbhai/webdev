@@ -6,13 +6,15 @@
 <body>
    {{>navbar}}
     <!-- main-header -->
-    <div class="container-fluid main_header">
+    <div class="main_header">
         <div class="row">
             <div class="col-md-10 col-12 mx-auto">
-                <div class="main_content">
+                <div class="container-fluid main_content">
                     <form class="temp_form">
                         <input type="text" name="cityName" id="Enter Your City Name" autocomplete="off">
+                        <br>
                       <input type="submit" value="search" id="submitBtn">
+                      <p id="temp_err"></p>
                     </form>
                 </div>
                 <div class="tempInformation">
@@ -23,7 +25,7 @@
                     <div class="main_layer">
                         <p id="city_name">Get output Here</p>
                         <div class="middle_layer data_hide">
-                            <p id="temp"><span>0</span><sup>o</sup>C</p>
+                            <p id="temp"><span id="temp_real_val">0</span><sup>o</sup>C</p>
                              <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
                         </div>
                     </div>
@@ -32,5 +34,6 @@
         </div>
     </div>
     {{>footer}}
+    <script src="public\main.js"></script>
 </body>
 </html>
